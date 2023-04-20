@@ -25,7 +25,7 @@ namespace rental_convenience
             for (int i = 0; i < this.Cart.Count; i++) {
                 if(this.Cart[i].Model == appliance.Model)
                 {
-                    Cart.RemoveAt(i);
+                    this.Cart.RemoveAt(i);
                 }
             }
             MessageBox.Show("Deleted from cart");

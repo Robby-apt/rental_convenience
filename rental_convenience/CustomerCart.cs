@@ -51,7 +51,7 @@ namespace rental_convenience
                 break;
             }
         }*/
-        private void BindAppliancesToCartGrid()
+        /*private void BindAppliancesToCartGrid()
         {
             // Provide data source for DataGridView
             // Get logged in customer object
@@ -89,7 +89,51 @@ namespace rental_convenience
                     loggedInCustomer.DeleteFromCart(selectedAppliance);
                 }
             }
+        }*/
+
+        // Bind appliances to cart grid
+        private void BindAppliancesToCartGrid()
+        {
+            // Find the logged-in customer
+            Customer loggedInCustomer = Program.CustomerRepo.Customers.FirstOrDefault(c => c.Username == loggedInUsername);
+
+            if (loggedInCustomer != null)
+            {
+                // Provide data source for DataGridView
+                dataGridView2.DataSource = loggedInCustomer.Cart;
+
+                // Add button that removes from cart for each appliance
+                DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
+                buttonColumn.Name = "RemoveFromCart";
+                buttonColumn.Text = "Remove from cart";
+                buttonColumn.UseColumnTextForButtonValue = true;
+                dataGridView2.Columns.Add(buttonColumn);
+            }
         }
+
+        // Handle cell click event
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView2.Columns["RemoveFromCart"].Index && e.RowIndex >= 0)
+            {
+                // Get the selected appliance from the DataGridView
+                Appliance selectedAppliance = (Appliance)dataGridView2.Rows[e.RowIndex].DataBoundItem;
+
+                // Find the logged-in customer
+                Customer loggedInCustomer = Program.CustomerRepo.Customers.FirstOrDefault(c => c.Username == loggedInUsername);
+
+                if (loggedInCustomer != null)
+                {
+                    // Remove the selected appliance from the cart of the logged-in customer
+                    loggedInCustomer.DeleteFromCart(selectedAppliance);
+
+                    // Refresh the DataGridView
+                    dataGridView2.DataSource = null;
+                    dataGridView2.DataSource = loggedInCustomer.Cart;
+                }
+            }
+        }
+
 
         private void CustomerCart_Load(object sender, EventArgs e)
         {
