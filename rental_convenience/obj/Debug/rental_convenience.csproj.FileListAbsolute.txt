@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\bin\Debug\rental_convenience.exe.config
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\bin\Debug\rental_convenience.exe
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\bin\Debug\rental_convenience.pdb
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.AdminLogin.resources
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.CustomerLogin.resources
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.Properties.Resources.resources
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.Register.resources
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.csproj.GenerateResource.cache
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.exe
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.pdb
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.AdminDashboard.resources
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.CustomerDashboard.resources
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.CustomerCart.resources

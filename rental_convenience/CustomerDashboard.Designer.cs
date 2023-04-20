@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.customerGreeting = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.toCartBtn = new System.Windows.Forms.Button();
             this.logOutBtn = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // customerGreeting
@@ -54,16 +59,17 @@
             // 
             // toCartBtn
             // 
-            this.toCartBtn.Location = new System.Drawing.Point(607, 28);
+            this.toCartBtn.Location = new System.Drawing.Point(815, 18);
             this.toCartBtn.Name = "toCartBtn";
             this.toCartBtn.Size = new System.Drawing.Size(75, 23);
             this.toCartBtn.TabIndex = 2;
             this.toCartBtn.Text = "Cart";
             this.toCartBtn.UseVisualStyleBackColor = true;
+            this.toCartBtn.Click += new System.EventHandler(this.toCartBtn_Click);
             // 
             // logOutBtn
             // 
-            this.logOutBtn.Location = new System.Drawing.Point(699, 28);
+            this.logOutBtn.Location = new System.Drawing.Point(907, 18);
             this.logOutBtn.Name = "logOutBtn";
             this.logOutBtn.Size = new System.Drawing.Size(75, 23);
             this.logOutBtn.TabIndex = 3;
@@ -71,11 +77,24 @@
             this.logOutBtn.UseVisualStyleBackColor = true;
             this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 89);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(982, 471);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // programBindingSource
+            // 
+            this.programBindingSource.DataSource = typeof(rental_convenience.Program);
+            // 
             // CustomerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(994, 572);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.logOutBtn);
             this.Controls.Add(this.toCartBtn);
             this.Controls.Add(this.label2);
@@ -83,6 +102,8 @@
             this.Name = "CustomerDashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.CustomerDashboard_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,5 +115,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button toCartBtn;
         private System.Windows.Forms.Button logOutBtn;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource programBindingSource;
     }
 }

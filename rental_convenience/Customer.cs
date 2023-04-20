@@ -18,7 +18,7 @@ namespace rental_convenience
         }
 
         public void AddToCart(Appliance appliance) {
-            Cart.Add(appliance);
+            this.Cart.Add(appliance);
             MessageBox.Show("Added to cart");
         }
         public void DeleteFromCart(Appliance appliance) {
@@ -28,7 +28,7 @@ namespace rental_convenience
                     Cart.RemoveAt(i);
                 }
             }
-            Console.WriteLine("Deleted from cart");
+            MessageBox.Show("Deleted from cart");
         }
         public void GetCartTotal() {
             Console.WriteLine("Total is...");
