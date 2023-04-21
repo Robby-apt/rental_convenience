@@ -14,12 +14,12 @@ namespace rental_convenience
         public string Dimensions { get; set; }
         public string Colour { get; set; }
         public string PowerConsumption { get; set; }
-        public string MinRentTime { get; set; }
+        public int MinRentTime { get; set; }
         public decimal MonthlyFee { get; set; }
 
         // Constructor
 
-        public Appliance(string type, string brand, string model, string dimensions, string colour, string powerConsumption, string minRentTime, decimal monthlyFee)
+        public Appliance(string type, string brand, string model, string dimensions, string colour, string powerConsumption, int minRentTime, decimal monthlyFee)
         {
             Type = type;
             Brand = brand;
@@ -29,26 +29,6 @@ namespace rental_convenience
             PowerConsumption = powerConsumption;
             MinRentTime = minRentTime;
             MonthlyFee = monthlyFee;
-        }
-
-        // Add a method to return the minimum renting period for each type of appliance
-        public int GetMinimumRentingPeriod()
-        {
-            switch (this.Type)
-            {
-                case "TV":
-                    return 1;
-                case "Microwave":
-                    return 2;
-                case "Dishwasher":
-                    return 3;
-                case "Washing machine":
-                    return 4;
-                case "Fridge":
-                    return 5;
-                default:
-                    return 0;
-            }
         }
     }
 }

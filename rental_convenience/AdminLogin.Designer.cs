@@ -34,6 +34,7 @@
             this.adminLoginPassword = new System.Windows.Forms.TextBox();
             this.adminLoginUsername = new System.Windows.Forms.TextBox();
             this.adminLoginToCustomerBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // adminLoginBtn
@@ -88,11 +89,21 @@
             this.adminLoginToCustomerBtn.UseVisualStyleBackColor = true;
             this.adminLoginToCustomerBtn.Click += new System.EventHandler(this.adminLoginToCustomerBtn_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(63, 207);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(291, 13);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Admin username and password both are: rentalConvenience";
+            // 
             // AdminLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.adminLoginBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -113,5 +124,6 @@
         private System.Windows.Forms.TextBox adminLoginPassword;
         private System.Windows.Forms.TextBox adminLoginUsername;
         private System.Windows.Forms.Button adminLoginToCustomerBtn;
+        private System.Windows.Forms.Label label3;
     }
 }

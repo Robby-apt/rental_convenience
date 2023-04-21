@@ -46,7 +46,7 @@ namespace rental_convenience
 
             foreach (Appliance appliance in this.Cart)
             {
-                int rentingPeriod = appliance.GetMinimumRentingPeriod();
+                int rentingPeriod = appliance.MinRentTime;
                 decimal rentingFee = appliance.MonthlyFee;
                 decimal subtotal = rentingFee * rentingPeriod;
                 total += subtotal;

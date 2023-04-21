@@ -36,7 +36,7 @@
             // 
             // backToDashboard
             // 
-            this.backToDashboard.Location = new System.Drawing.Point(775, 34);
+            this.backToDashboard.Location = new System.Drawing.Point(839, 34);
             this.backToDashboard.Name = "backToDashboard";
             this.backToDashboard.Size = new System.Drawing.Size(114, 23);
             this.backToDashboard.TabIndex = 0;
@@ -49,7 +49,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(12, 85);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(877, 249);
+            this.dataGridView2.Size = new System.Drawing.Size(941, 353);
             this.dataGridView2.TabIndex = 1;
             // 
             // labelCartTotal
@@ -65,7 +65,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 450);
+            this.ClientSize = new System.Drawing.Size(965, 450);
             this.Controls.Add(this.labelCartTotal);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.backToDashboard);

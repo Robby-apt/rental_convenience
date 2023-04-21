@@ -15,7 +15,7 @@ namespace rental_convenience
             Appliances = new List<Appliance>();
         }
 
-        public void AddAppliance(string type, string brand, string model, string dimensions, string colour, string powerConsumption, string minRentTime, decimal monthlyFee)
+        public void AddAppliance(string type, string brand, string model, string dimensions, string colour, string powerConsumption, int minRentTime, decimal monthlyFee)
         {
             //Customers.Add(new Customer {Username = username,Password = password });
             Appliances.Add(new Appliance(type, brand, model, dimensions, colour, powerConsumption, minRentTime, monthlyFee));
