@@ -16,6 +16,13 @@ namespace rental_convenience
         {
             Cart = new List<Appliance>();
         }
+        // Event for updating cart
+        public event EventHandler CartUpdated;
+
+        protected virtual void OnCartUpdated()
+        {
+            CartUpdated?.Invoke(this, EventArgs.Empty);
+        }
 
         public void AddToCart(Appliance appliance) {
             this.Cart.Add(appliance);
@@ -26,12 +33,26 @@ namespace rental_convenience
                 if(this.Cart[i].Model == appliance.Model)
                 {
                     this.Cart.RemoveAt(i);
+                    OnCartUpdated();
+                    break;
                 }
             }
             MessageBox.Show("Deleted from cart");
         }
-        public void GetCartTotal() {
-            Console.WriteLine("Total is...");
+
+        public decimal GetCartTotal()
+        {
+            decimal total = 0;
+
+            foreach (Appliance appliance in this.Cart)
+            {
+                int rentingPeriod = appliance.GetMinimumRentingPeriod();
+                decimal rentingFee = appliance.MonthlyFee;
+                decimal subtotal = rentingFee * rentingPeriod;
+                total += subtotal;
+            }
+
+            return total;
         }
     }
 }

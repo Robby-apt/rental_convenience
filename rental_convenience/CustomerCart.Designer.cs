@@ -30,12 +30,13 @@
         {
             this.backToDashboard = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.labelCartTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // backToDashboard
             // 
-            this.backToDashboard.Location = new System.Drawing.Point(652, 35);
+            this.backToDashboard.Location = new System.Drawing.Point(775, 34);
             this.backToDashboard.Name = "backToDashboard";
             this.backToDashboard.Size = new System.Drawing.Size(114, 23);
             this.backToDashboard.TabIndex = 0;
@@ -48,14 +49,24 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(12, 85);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(776, 249);
+            this.dataGridView2.Size = new System.Drawing.Size(877, 249);
             this.dataGridView2.TabIndex = 1;
+            // 
+            // labelCartTotal
+            // 
+            this.labelCartTotal.AutoSize = true;
+            this.labelCartTotal.Location = new System.Drawing.Point(13, 44);
+            this.labelCartTotal.Name = "labelCartTotal";
+            this.labelCartTotal.Size = new System.Drawing.Size(35, 13);
+            this.labelCartTotal.TabIndex = 2;
+            this.labelCartTotal.Text = "label1";
             // 
             // CustomerCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(901, 450);
+            this.Controls.Add(this.labelCartTotal);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.backToDashboard);
             this.Name = "CustomerCart";
@@ -63,6 +74,7 @@
             this.Load += new System.EventHandler(this.CustomerCart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -70,5 +82,6 @@
 
         private System.Windows.Forms.Button backToDashboard;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label labelCartTotal;
     }
 }
