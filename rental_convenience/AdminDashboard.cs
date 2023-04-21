@@ -24,6 +24,12 @@ namespace rental_convenience
             adminGridView.DataSource = null;
             adminGridView.DataSource = Program.ApplianceRepo.Appliances;
         }
+        // refresh the data grid
+        public void refreshDataGrid()
+        {
+            adminGridView.DataSource = null;
+            adminGridView.DataSource = Program.ApplianceRepo.Appliances;
+        }
 
         // Provide data source for the data grid view
         private void BindAppliancesToGrid()
@@ -56,6 +62,9 @@ namespace rental_convenience
             {
                 // Get the selected appliance from the DataGridView
                 Appliance selectedAppliance = (Appliance)adminGridView.Rows[e.RowIndex].DataBoundItem;
+                // Display edit item form
+                //EditItem editItem = new EditItem();
+                //editItem.Show();
                 // Code to edit appliance
             }else if (e.ColumnIndex == adminGridView.Columns["DeleteItem"].Index && e.RowIndex >= 0)
             {
@@ -75,6 +84,12 @@ namespace rental_convenience
         {
             BindAppliancesToGrid();
             adminGridView.CellClick += adminGridView_CellClick;
+        }
+
+        private void addInventoryBtn_Click(object sender, EventArgs e)
+        {
+            AddItem addItem = new AddItem();
+            addItem.Show();
         }
     }
 }

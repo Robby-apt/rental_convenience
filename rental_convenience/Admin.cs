@@ -16,10 +16,26 @@ namespace rental_convenience
         public void AddItem(string type, string brand, string model, string dimensions, string colour, string powerConsumption, int minRentTime, decimal monthlyFee)
         {
             Program.ApplianceRepo.AddAppliance(type, brand, model, dimensions, colour, powerConsumption, minRentTime, monthlyFee);
-            Console.WriteLine("Item added");
+            MessageBox.Show("New appliance added");
         }
-        public void EditItem() {
-            Console.WriteLine("Item edited");
+        public void EditItem(Appliance appliance, string type, string brand, string model, string dimensions, string colour, string powerConsumption, int minRentTime, decimal monthlyFee) {
+            for (int i = 0; i < Program.ApplianceRepo.Appliances.Count; i++)
+            {
+                if (Program.ApplianceRepo.Appliances[i].Model == appliance.Model)
+                {
+                    Program.ApplianceRepo.Appliances[i].Type = type;
+                    Program.ApplianceRepo.Appliances[i].Brand = brand;
+                    Program.ApplianceRepo.Appliances[i].Model = model;
+                    Program.ApplianceRepo.Appliances[i].Dimensions = dimensions;
+                    Program.ApplianceRepo.Appliances[i].Colour = colour;
+                    Program.ApplianceRepo.Appliances[i].PowerConsumption = powerConsumption;
+                    Program.ApplianceRepo.Appliances[i].MinRentTime = minRentTime;
+                    Program.ApplianceRepo.Appliances[i].MonthlyFee = monthlyFee;
+                    OnInventoryUpdated();
+                    break;
+                }
+            }
+            MessageBox.Show("Item edited");
         }
         public void DeleteItem(Appliance appliance) {
             for (int i = 0; i < Program.ApplianceRepo.Appliances.Count; i++)

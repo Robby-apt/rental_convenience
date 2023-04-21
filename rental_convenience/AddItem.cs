@@ -16,5 +16,24 @@ namespace rental_convenience
         {
             InitializeComponent();
         }
+
+        private void cancelAddBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void addToInventoryBtn_Click(object sender, EventArgs e)
+        {
+            if(addType.Text == "" || addBrand.Text == "" || addModel.Text == "" || addDimensions.Text == "" || addColour.Text == "" || addPowerConsumption.Text == "" || addMinRentTime.Text == "" || addMonthlyFee.Text == "")
+            {
+                MessageBox.Show("Kindly fill all the fields");
+            }
+            else
+            {
+                Program.admin.AddItem(addType.Text, addBrand.Text, addModel.Text, addDimensions.Text, addColour.Text, addPowerConsumption.Text, Int32.Parse(addMinRentTime.Text), Decimal.Parse(addMonthlyFee.Text));
+                Application.OpenForms.OfType<AdminDashboard>().FirstOrDefault().refreshDataGrid();
+                this.Hide();
+            }
+        }
     }
 }

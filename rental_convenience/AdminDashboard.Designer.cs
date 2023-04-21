@@ -63,6 +63,7 @@
             this.addInventoryBtn.TabIndex = 2;
             this.addInventoryBtn.Text = "Add new item";
             this.addInventoryBtn.UseVisualStyleBackColor = true;
+            this.addInventoryBtn.Click += new System.EventHandler(this.addInventoryBtn_Click);
             // 
             // adminGridView
             // 

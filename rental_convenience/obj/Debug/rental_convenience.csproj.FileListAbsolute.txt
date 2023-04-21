@@ -14,3 +14,5 @@ C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug
 C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.AdminDashboard.resources
 C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.CustomerDashboard.resources
 C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.CustomerCart.resources
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.AddItem.resources
+C:\Users\user\Desktop\C#Projects\rental_convenience\rental_convenience\obj\Debug\rental_convenience.EditItem.resources
