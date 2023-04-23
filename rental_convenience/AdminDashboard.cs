@@ -91,5 +91,12 @@ namespace rental_convenience
             AddItem addItem = new AddItem();
             addItem.Show();
         }
+
+        private void adminLogoutBtn_Click(object sender, EventArgs e)
+        {
+            AdminLogin adminLogin = new AdminLogin();
+            adminLogin.Show();
+            this.Hide();
+        }
     }
 }

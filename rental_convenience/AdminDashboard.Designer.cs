@@ -54,6 +54,7 @@
             this.adminLogoutBtn.TabIndex = 1;
             this.adminLogoutBtn.Text = "Log out";
             this.adminLogoutBtn.UseVisualStyleBackColor = true;
+            this.adminLogoutBtn.Click += new System.EventHandler(this.adminLogoutBtn_Click);
             // 
             // addInventoryBtn
             // 
