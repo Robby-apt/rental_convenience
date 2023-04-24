@@ -63,8 +63,9 @@ namespace rental_convenience
                 // Get the selected appliance from the DataGridView
                 Appliance selectedAppliance = (Appliance)adminGridView.Rows[e.RowIndex].DataBoundItem;
                 // Display edit item form
-                //EditItem editItem = new EditItem();
-                //editItem.Show();
+                EditItem editItem = new EditItem();
+                editItem.SetCurrentAppliance(selectedAppliance);
+                editItem.Show();
                 // Code to edit appliance
             }else if (e.ColumnIndex == adminGridView.Columns["DeleteItem"].Index && e.RowIndex >= 0)
             {

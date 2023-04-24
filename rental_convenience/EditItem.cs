@@ -16,6 +16,11 @@ namespace rental_convenience
         {
             InitializeComponent();
         }
+        private Appliance currentAppliance;
+        public void SetCurrentAppliance(Appliance appliance)
+        {
+            currentAppliance = appliance;
+        }
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
@@ -31,13 +36,20 @@ namespace rental_convenience
             else
             {
                 this.Hide();
-                //Program.admin.EditItem(()sender,editType.Text, editBrand.Text, editModel.Text, editDimensions.Text, editColour.Text, editPowerConsumption.Text, Int32.Parse(editMinRentTime.Text), Decimal.Parse(editMonthlyFee.Text))
+                Program.admin.EditItem(currentAppliance, editType.Text, editBrand.Text, editModel.Text, editDimensions.Text, editColour.Text, editPowerConsumption.Text, Int32.Parse(editMinRentTime.Text), Decimal.Parse(editMonthlyFee.Text));
             }
         }
 
         private void EditItem_Load(object sender, EventArgs e)
         {
-
+            editType.Text = currentAppliance.Type;
+            editBrand.Text = currentAppliance.Brand;
+            editModel.Text = currentAppliance.Model;
+            editDimensions.Text = currentAppliance.Dimensions;
+            editColour.Text = currentAppliance.Colour;
+            editPowerConsumption.Text = currentAppliance.PowerConsumption;
+            editMinRentTime.Text = currentAppliance.MinRentTime.ToString();
+            editMonthlyFee.Text = currentAppliance.MonthlyFee.ToString();
         }
     }
 }
